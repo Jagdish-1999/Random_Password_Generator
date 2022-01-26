@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="sliderSelect.js" defer></script>
+    <script src="script.js" defer charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="root flex">
+      <div class="container flex">
+        <h2>Password Generator</h2>
+
+        <div class="click-label items">
+          <span id="hidden" contenteditable="true">Click Generate</span>
+        </div>
+
+        <div class="label-length">length <span id="change-label-length">4</span></div>
+        <div class="length flex items">
+          <span class="nums">4</span>
+          <input
+            type="range"
+            min="4"
+            max="32"
+            value="4"
+            class="slider-range"
+            style="visibility: visible"
+          />
+          <span class="nums">32</span>
+        </div>
+
+        <div class="settings">
+          <div class="label-setting" item>settings</div>
+
+          <div class="number items flex-toggle">
+            <span class="text-casses">include numbers</span>
+            <div class="main"></div>
+          </div>
+          <div class="upper items flex-toggle">
+            <span class="text-casses">include uppercase</span>
+            <div class="main"></div>
+          </div>
+          <div class="lower items flex-toggle">
+            <span class="text-casses">include lowercase</span>
+            <div class="main"></div>
+          </div>
+          <div class="symbo items flex-toggle" for="toggle-select4">
+            <span class="text-casses">include symbols</span>
+            <div class="main"></div>
+          </div>
+          <button id="generate" class="generate items btn"><h4>generate password</h4></div>
+          <button id="reset" class="generate items btn"><h4>Reset</h4></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
