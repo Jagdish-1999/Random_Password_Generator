@@ -12,7 +12,7 @@ function slider(letterId) {
   input.id = letterId;
   return div;
 }
-slider("numbers");
+const num = slider("numbers");
 slider("upper_L");
 slider("lower_L");
 slider("symbols");

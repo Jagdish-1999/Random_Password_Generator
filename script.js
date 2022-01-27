@@ -9,10 +9,10 @@ const upper = document.getElementById("upper_L");
 const lower = document.getElementById("lower_L");
 const number = document.getElementById("numbers");
 const symbol = document.getElementById("symbols");
-
 let arrayUpper = [];
 let arrayLower = [];
 let arrayNumber = [];
+// make duplicate for more occurence of characters
 let arraySymbol = ["@", "#", "$", "&", "@", "#", "$", "&", "@"];
 
 let flag_for_symbol_check = false;
@@ -22,33 +22,36 @@ upper.addEventListener("click", (e) => {
   if (e.target.checked) {
     for (let i = 0; i < 10; i++) {
       arrayUpper.push(randomChars(65, 90));
+      flag_for_symbol_check = true;
     }
   } else {
     arrayUpper = [];
+    flag_for_symbol_check = false;
   }
-  flag_for_symbol_check = true;
 });
 // for lower case letters
 lower.addEventListener("click", (e) => {
   if (e.target.checked) {
     for (let i = 0; i < 10; i++) {
       arrayLower.push(randomChars(97, 122));
+      flag_for_symbol_check = true;
     }
   } else {
     arrayLower = [];
+    flag_for_symbol_check = false;
   }
-  flag_for_symbol_check = true;
 });
 // for numbers
 number.addEventListener("click", (e) => {
   if (e.target.checked) {
     for (let i = 0; i < 9; i++) {
       arrayNumber.push(randomNums(0, 10));
+      flag_for_symbol_check = true;
     }
   } else {
     arrayNumber = [];
+    flag_for_symbol_check = false;
   }
-  flag_for_symbol_check = true;
 });
 
 slider_value.addEventListener("change", rangeValue);
@@ -84,7 +87,6 @@ function setPass(array) {
     idx = randomNums(1, array.length - 1);
     str[i] = array[idx];
   }
-  // console.log(str);
   showPass.innerText = str.join("");
 }
 
