@@ -111,7 +111,6 @@ h2 {
   height: 3rem;
   margin: 0.5rem 0;
   padding: 0.8rem;
-  /* text-indent: 6px; */
   border-radius: 0.5rem;
   background-color: rgba(29, 32, 65, 0.8);
   font-family: "Poppins", sans-serif;
@@ -138,9 +137,8 @@ h2 {
 .btn {
   outline: none;
   border: none;
-  /* padding: 0; */
-  /* margin: auto; */
 }
+
 /* dynamic loading with javascript */
 
 .slider-container {

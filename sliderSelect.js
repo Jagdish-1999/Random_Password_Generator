@@ -1,5 +1,4 @@
 // creating component  for slider check
-
 function slider(letterId) {
   const div = document.querySelector(".main");
   const input = document.createElement("input");
@@ -12,7 +11,7 @@ function slider(letterId) {
   input.id = letterId;
   return div;
 }
-const num = slider("numbers");
+slider("numbers");
 slider("upper_L");
 slider("lower_L");
 slider("symbols");
